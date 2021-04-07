@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio 14</title>
+</head>
+
+<body>
+	<script>
+
+		//Diseñar un algoritmo que cuente la cantidad de palabras que contiene una cadena de texto.
+		function contar_palabras() {
+			//Obtenemos el texto del campo
+			var texto = "Hola mundo! Contamos palabras!";
+			document.write(texto + '<br /><br />');
+			//Reemplazamos los saltos de linea por espacios
+			texto = texto.replace(/\r?\n/g, " ");
+			//Reemplazamos los espacios seguidos por uno solo
+			texto = texto.replace(/[ ]+/g, " ");
+			//Quitamos los espacios del principio y del final
+			texto = texto.replace(/^ /, "");
+			texto = texto.replace(/ $/, "");
+			//Troceamos el texto por los espacios
+			var textoTroceado = texto.split(" ");
+			//Contamos todos los trozos de cadenas que existen
+			var numeroPalabras = textoTroceado.length;
+			//Mostramos el número de palabras
+			document.write("Hay\t" + numeroPalabras + "\tpalabras en este texto.");
+		}
+
+		//Llamamos a la función para que cuente las palabras
+		contar_palabras();
+	</script>
+</body>
+
+</html>

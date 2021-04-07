@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 13</title>
+</head>
+
+<body>
+    <script>
+        //Algoritmo que transforma un array multidimensional en un array unidireccional
+
+        var arrToConvert = [[0, 0, 1], [2, 3, 3], [4, 4, 5]];
+        var newArr = [];
+        var i;
+        var coma = ",";
+
+        document.write('[');
+
+        for (i = 0; i < arrToConvert.length; i++) {
+
+            document.write('(' + arrToConvert[i] + ')');
+
+            if (i != arrToConvert.length - 1) {
+                document.write("\t" + coma + "\t");
+            }
+
+            newArr = newArr.concat(arrToConvert[i]);
+        }
+
+        document.write(']<br />');
+
+        document.write('<br />[');
+
+        for (i = 0; i < newArr.length; i++) {
+
+            document.write(newArr[i]);
+
+            if (i != newArr.length - 1) {
+                document.write(coma);
+            }
+        }
+
+        document.write(']<br />');
+        
+    </script>
+</body>
+
+</html>

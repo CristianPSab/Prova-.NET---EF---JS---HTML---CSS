@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej 12</title>
+</head>
+<body>
+    <script>
+        //Algoritmo que ordena un vector de números de forma descendiente 
+        document.writeln('Vector desordenado de números<br/>'); // Mostramos, por consola, la lista desordenada
+
+        function Burbuja() {
+            
+            var lista = [3, 8, 7, 1, 4, 5, 7, 3, 1, 9, 0, 0, 1];
+            
+            var n, i, k, aux;
+            n = lista.length;
+
+            for (i = 0; i < lista.length; i++) {
+                document.write('<br />' + lista[i] + '<br />');
+            }
+
+            // Algoritmo de burbuja
+            for (k = 1; k < n; k++) {
+                for (i = 0; i < (n - k); i++) {
+                    if (lista[i] < lista[i + 1]) {
+                        aux = lista[i];
+                        lista[i] = lista[i + 1];
+                        lista[i + 1] = aux;
+                    }
+                }
+            }
+
+            document.write('<br />Vector ordenado de forma descendiente<br/>')
+           
+            for (let i = 0; i < lista.length; i++) {
+
+                document.write('<br />' + lista[i] + '<br />');
+                
+            }
+        }
+
+        Burbuja();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 20% 30% 30% 20%;
+    background-color: green;
+    padding: 40px;
+  }
+  
+  .grid-container > div {
+    
+    background-color: rgba(211,211,211, 0.85);
+    padding: 40px 0;
+    font-size: 25px;
+  }
+  
+  .item1{
+    color: white;
+    text-align: left;
+    text-indent: 2em;
+    margin-right: 20%;
+    margin-left: 5%; 
+    
+  }
+  .item2 {
+    color: white;
+    text-align: center;
+    margin-right: 10%;
+    margin-left: 5%;
+
+  }
+  
+  .item3{
+    color: white;
+    text-align: center;
+    margin-right: 5%;
+    margin-left: 10%;
+  
+  }
+
+  .item4{
+    color: white;
+    text-align: left;
+    text-indent: 2em;
+    margin-right: 5%;
+    margin-left: 20%;
+  }
